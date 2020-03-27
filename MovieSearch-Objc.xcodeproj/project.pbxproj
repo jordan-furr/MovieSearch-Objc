@@ -16,6 +16,7 @@
 		C51AFEB4242E4DC800E8E127 /* JEFMovie.m in Sources */ = {isa = PBXBuildFile; fileRef = C51AFEB3242E4DC800E8E127 /* JEFMovie.m */; };
 		C51AFEB8242E523900E8E127 /* JEFMovieController.m in Sources */ = {isa = PBXBuildFile; fileRef = C51AFEB7242E523900E8E127 /* JEFMovieController.m */; };
 		C51AFEBD242E525A00E8E127 /* JEFMovieTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51AFEBC242E525A00E8E127 /* JEFMovieTableViewController.swift */; };
+		C51AFEBF242E5F5B00E8E127 /* JEFMovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C51AFEBE242E5F5B00E8E127 /* JEFMovieTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		C51AFEB7242E523900E8E127 /* JEFMovieController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JEFMovieController.m; sourceTree = "<group>"; };
 		C51AFEBB242E525A00E8E127 /* MovieSearch-Objc-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "MovieSearch-Objc-Bridging-Header.h"; sourceTree = "<group>"; };
 		C51AFEBC242E525A00E8E127 /* JEFMovieTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JEFMovieTableViewController.swift; sourceTree = "<group>"; };
+		C51AFEBE242E5F5B00E8E127 /* JEFMovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JEFMovieTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,7 +105,7 @@
 			isa = PBXGroup;
 			children = (
 				C51AFEBA242E524400E8E127 /* Model Controllers */,
-				C51AFEBC242E525A00E8E127 /* JEFMovieTableViewController.swift */,
+				C51AFEC0242E5F6000E8E127 /* View Controllers */,
 				C51AFEBB242E525A00E8E127 /* MovieSearch-Objc-Bridging-Header.h */,
 			);
 			path = Controllers;
@@ -116,6 +118,15 @@
 				C51AFEB7242E523900E8E127 /* JEFMovieController.m */,
 			);
 			path = "Model Controllers";
+			sourceTree = "<group>";
+		};
+		C51AFEC0242E5F6000E8E127 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				C51AFEBC242E525A00E8E127 /* JEFMovieTableViewController.swift */,
+				C51AFEBE242E5F5B00E8E127 /* JEFMovieTableViewCell.swift */,
+			);
+			path = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -195,6 +206,7 @@
 				C51AFEAB242E4A4500E8E127 /* main.m in Sources */,
 				C51AFEB4242E4DC800E8E127 /* JEFMovie.m in Sources */,
 				C51AFEB8242E523900E8E127 /* JEFMovieController.m in Sources */,
+				C51AFEBF242E5F5B00E8E127 /* JEFMovieTableViewCell.swift in Sources */,
 				C51AFE9D242E4A4300E8E127 /* SceneDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

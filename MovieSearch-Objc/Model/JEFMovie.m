@@ -24,6 +24,12 @@
     return self;
 }
 
+-(instancetype)init
+{
+    return self;
+    
+}
+
 @end
 
 @implementation JEFMovie(JSONConvertable)

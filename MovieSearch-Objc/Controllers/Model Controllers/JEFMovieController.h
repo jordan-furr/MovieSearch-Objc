@@ -15,7 +15,7 @@ NS_ASSUME_NONNULL_BEGIN
 @interface JEFMovieController : NSObject
 
 +(void)fetchMovies:(NSString *) searchTerm completion:(void(^)(NSArray<JEFMovie *> *))completion;
-+(void)fetchPoster:(JEFMovie *) movie completion:(void(^)(UIImage *))completion;
++(void)fetchPoster:(JEFMovie *) movie completion:(void(^)(UIImage * _Nullable))completion;
 
 @end
 
