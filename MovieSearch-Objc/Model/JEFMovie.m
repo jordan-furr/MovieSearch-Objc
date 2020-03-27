@@ -10,7 +10,7 @@
 
 @implementation JEFMovie
 
--(instancetype)initWithTitle:(NSString *)title rating:(NSNumber *)rating overview:(NSString *)overview imageString:(NSString *)imageString
+-(instancetype)initWithTitle:(NSString *)title rating:(NSNumber *)rating overview:(NSString *)overview imageString:(NSString * _Nullable)imageString
 {
     self = [super init];
     
@@ -39,7 +39,7 @@
     NSString *title = dict[@"title"];
     NSNumber *rating = dict[@"vote_average"];
     NSString *overview = dict[@"overview"];
-    NSString *imageString = dict[@"poster_path"];
+    NSString * _Nullable imageString = dict[@"poster_path"];
     
     return [self initWithTitle:title rating:rating overview:overview imageString:imageString];
 }

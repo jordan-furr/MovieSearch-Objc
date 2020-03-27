@@ -15,4 +15,5 @@ class JEFMovieTableViewCell: UITableViewCell {
     
     @IBOutlet weak var descriptionlabel: UITextView!
     
+    @IBOutlet weak var posterImage: UIImageView!
 }

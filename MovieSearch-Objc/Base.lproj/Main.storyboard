@@ -3,7 +3,6 @@
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
-        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -54,6 +53,10 @@
                                             <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                             <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                         </textView>
+                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="hU1-IB-dtC">
+                                            <rect key="frame" x="12" y="15" width="100" height="128"/>
+                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        </imageView>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="V5Q-qL-wUP" firstAttribute="top" secondItem="sOJ-sB-2fL" secondAttribute="bottom" id="30t-Oi-puH"/>
@@ -70,6 +73,7 @@
                                 </tableViewCellContentView>
                                 <connections>
                                     <outlet property="descriptionlabel" destination="kFV-Yz-ynv" id="BZ5-YK-xUB"/>
+                                    <outlet property="posterImage" destination="hU1-IB-dtC" id="cQQ-OI-7qi"/>
                                     <outlet property="ratinglabel" destination="V5Q-qL-wUP" id="9FP-P0-lrN"/>
                                     <outlet property="titlelabel" destination="sOJ-sB-2fL" id="44Q-MP-1pr"/>
                                 </connections>
@@ -89,22 +93,6 @@
             </objects>
             <point key="canvasLocation" x="901.44927536231887" y="139.28571428571428"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="Inf-qb-fvO">
-            <objects>
-                <viewController id="rng-zQ-J87" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="xCb-w7-UyE">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                        <viewLayoutGuide key="safeArea" id="pQ1-wn-ig1"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="gSV-aH-EZF"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="WU0-kN-tcX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1600" y="139"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="2oS-5t-zxb">
             <objects>
@@ -114,6 +102,9 @@
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" systemColor="systemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>

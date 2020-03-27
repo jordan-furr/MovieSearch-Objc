@@ -16,6 +16,7 @@ class JEFMovieTableViewController: UITableViewController, UISearchBarDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.title = "Movie Search"
         movieSearch.delegate = self
     }
 
@@ -32,6 +33,17 @@ class JEFMovieTableViewController: UITableViewController, UISearchBarDelegate {
         cell.ratinglabel.text = "Rating: \(movie.rating)"
         cell.descriptionlabel.text = movie.overview
         cell.descriptionlabel.isEditable = false
+        
+        JEFMovieController.fetchPoster(movie) { (image) in
+            DispatchQueue.main.async {
+                if (image != nil){
+                    cell.posterImage.image = image
+                }
+                else {
+                    cell.posterImage.image = #imageLiteral(resourceName: "download-1")
+                }
+            }
+        }
         return cell
     }
     

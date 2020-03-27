@@ -67,26 +67,30 @@ static NSString * const apiKey = @"91f12a196d5f1c736169c6964e49d633";
 +(void)fetchPoster:(JEFMovie *)movie completion:(void (^)(UIImage * _Nullable))completion
 {
     NSURL *baseURL = [NSURL URLWithString:imageBase];
-    NSURL *imageURL = [baseURL URLByAppendingPathComponent:movie.imageString];
-    
-    NSLog(@"%@", imageURL);
-    
-    [[[NSURLSession sharedSession] dataTaskWithURL:imageURL completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError *  _Nullable error) {
-        if(error) {
-            NSLog(@"Error fetching pokemon from searchterm: %@", error);
-            completion(nil);
-            return;
-        }
+    if(![movie.imageString isEqual:[NSNull null]]) {
+        NSURL *imageURL = [baseURL URLByAppendingPathComponent:movie.imageString];
         
-        if (!data){
-            NSLog(@"Error fethcing pokemon data from search term: %@", error);
-            completion(nil);
-            return;
-        }
+        NSLog(@"%@", imageURL);
         
-        UIImage *image = [UIImage imageWithData:data];
-        completion(image);
-    }]resume];
+        [[[NSURLSession sharedSession] dataTaskWithURL:imageURL completionHandler:^(NSData * _Nullable data, NSURLResponse * _Nullable response, NSError *  _Nullable error) {
+            if(error) {
+                NSLog(@"Error fetching pokemon from searchterm: %@", error);
+                completion(nil);
+                return;
+            }
+            
+            if (!data){
+                NSLog(@"Error fethcing pokemon data from search term: %@", error);
+                completion(nil);
+                return;
+            }
+            
+            UIImage *image = [UIImage imageWithData:data];
+            completion(image);
+        }]resume];
+    } else {
+        completion(nil);
+        return;
+    }
 }
-
 @end

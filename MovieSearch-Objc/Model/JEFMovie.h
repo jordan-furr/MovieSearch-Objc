@@ -17,7 +17,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy, readonly) NSString *overview;
 @property (nonatomic, copy, readonly) NSString * _Nullable imageString;
 
--(instancetype)initWithTitle:(NSString *) title rating:(NSNumber *) rating overview:(NSString *) overview imageString:(NSString *)imageString;
+-(instancetype)initWithTitle:(NSString *) title rating:(NSNumber *) rating overview:(NSString *) overview imageString:(NSString * _Nullable)imageString;
 
 
 @end
